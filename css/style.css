@@ -171,7 +171,6 @@ body {
   line-height: 1.0;
   min-height: var(--viewport-height);
   min-width: 320px;
-  overflow-x: hidden;
   word-wrap: break-word;
   overflow: hidden;
 }
