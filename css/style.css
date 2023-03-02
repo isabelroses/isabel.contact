@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: "Victor Mono";
-  src: url("/fonts/victormono-regular-webfont.woff") format("woff");
+  src: url("./fonts/victormono-regular-webfont.woff") format("woff");
 }
 
 @font-face {
   font-family: "Victor Mono Italic";
-  src: url("/fonts/victormono-italic-webfont.woff") format("woff");
+  src: url("./fonts/victormono-italic-webfont.woff") format("woff");
 }
 
 html,
@@ -171,6 +171,7 @@ body {
   line-height: 1.0;
   min-height: var(--viewport-height);
   min-width: 320px;
+  overflow-x: hidden;
   word-wrap: break-word;
   overflow: hidden;
 }
@@ -290,7 +291,7 @@ a {
   max-width: 100%;
   position: relative;
   text-align: var(--alignment);
-  z-index: 1;
+  z-index: 3;
   background-color: #1E1E2E;
   box-shadow: 0rem 1.125rem 4.125rem 0rem rgba(0, 0, 0, 0.451);
   border-radius: var(--border-radius-tl) var(--border-radius-tr) var(--border-radius-br) var(--border-radius-bl);
@@ -1072,7 +1073,6 @@ body:after {
 }
 
 #blob {
-  background-color: white;
   height: 24vmax;
   aspect-ratio: 1;
   position: absolute;

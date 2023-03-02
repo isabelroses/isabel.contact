@@ -468,22 +468,6 @@
 	})()
 })()
 
-/* -- Glow effect -- */
-
-const blob = document.getElementById("blob")
-
-window.onpointermove = (event) => {
-	const {clientX, clientY} = event
-
-	blob.animate(
-		{
-			left: `${clientX}px`,
-			top: `${clientY}px`,
-		},
-		{duration: 0, fill: "forwards"}
-	)
-}
-
 /* -- Text effect -- */
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -521,11 +505,24 @@ document.querySelector("#text01").onmouseover = (event) => {
 	}
 }
 
-if (!document.getElementsByTagName("html").classList.contains(".is-touch")) {
-	const blur = document.createElement("div")
-	blur.id("#blur")
+if (!document.body.classList.contains("is-touch")) {
 	const blob = document.createElement("div")
-	blur.id("#blob")
-	document.body.appendChild(blur)
-	document.body.appendChild(blob)
+	blob.id = "blob"
+	const blur = document.createElement("div")
+	blur.id = "blur"
+	document.getElementById("wrapper").appendChild(blob)
+	document.getElementById("wrapper").appendChild(blur)
+
+	/* -- Glow effect -- */
+	window.onpointermove = (event) => {
+		const {clientX, clientY} = event
+
+		blob.animate(
+			{
+				left: `${clientX}px`,
+				top: `${clientY}px`,
+			},
+			{duration: 0, fill: "forwards"}
+		)
+	}
 }
