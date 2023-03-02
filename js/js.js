@@ -520,3 +520,12 @@ document.querySelector("#text01").onmouseover = (event) => {
 		allowOnce = false
 	}
 }
+
+if (!document.getElementsByTagName("html").classList.contains(".is-touch")) {
+	const blur = document.createElement("div")
+	blur.id("#blur")
+	const blob = document.createElement("div")
+	blur.id("#blob")
+	document.body.appendChild(blur)
+	document.body.appendChild(blob)
+}
