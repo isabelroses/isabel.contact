@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: "Victor Mono";
-  src: url("/fonts/victormono-regular-webfont.woff") format("woff");
+  src: url("./fonts/victormono-regular-webfont.woff") format("woff");
 }
 
 @font-face {
   font-family: "Victor Mono Italic";
-  src: url("/fonts/victormono-italic-webfont.woff") format("woff");
+  src: url("./fonts/victormono-italic-webfont.woff") format("woff");
 }
 
 html,
