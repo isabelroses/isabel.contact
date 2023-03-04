@@ -14,83 +14,10 @@ html,
 body,
 div,
 span,
-applet,
-object,
-iframe,
 h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
 img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
 ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+li {
   margin: 0;
   padding: 0;
   border: 0;
@@ -99,62 +26,16 @@ video {
   vertical-align: baseline;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-
-ol,
 ul {
   list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 body {
   -webkit-text-size-adjust: none
 }
 
-mark {
-  background-color: transparent;
-  color: inherit
-}
 
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0
-}
-
-input[type="text"],
-input[type="email"],
-select,
-textarea {
+select {
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -226,33 +107,6 @@ body.is-loading:after {
 
 html {
   font-size: 18pt;
-}
-
-u {
-  text-decoration: underline;
-}
-
-strong {
-  color: inherit;
-  font-weight: bolder;
-}
-
-em {
-  font-style: italic;
-}
-
-s {
-  text-decoration: line-through;
-}
-
-sub {
-  font-size: smaller;
-  vertical-align: sub;
-}
-
-sup {
-  font-size: smaller;
-  vertical-align: super;
 }
 
 a {
@@ -350,57 +204,6 @@ a {
   left: 50%;
   margin-left: -50vw;
   right: auto;
-}
-
-body.is-loading #main {
-  opacity: 0;
-  transform: scale(0.94375);
-}
-
-body.is-instant #main,
-body.is-instant #main>.inner>*,
-body.is-instant #main>.inner>section>* {
-  transition: none !important;
-}
-
-body.is-instant:after {
-  display: none !important;
-  transition: none !important;
-}
-
-@keyframes loading-spinner {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.deferred:before {
-  content: '';
-  display: block;
-  width: 4rem;
-  height: 4rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -2rem 0 0 -2rem;
-  animation: loading-spinner 1s infinite linear;
-  transition: opacity 0.25s ease;
-  transition-delay: 0.5s;
-  opacity: 0;
-  z-index: -1;
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTZweCIgaGVpZ2h0PSI5NnB4IiB2aWV3Qm94PSIwIDAgOTYgOTYiIHpvb21BbmRQYW49ImRpc2FibGUiPjxzdHlsZT5jaXJjbGUge2ZpbGw6IHRyYW5zcGFyZW50OyBzdHJva2U6ICNmZmY7IHN0cm9rZS13aWR0aDogMS41cHg7IH08L3N0eWxlPjxkZWZzPjxjbGlwUGF0aCBpZD0iY29ybmVyIj48cG9seWdvbiBwb2ludHM9IjAsMCA0OCwwIDQ4LDQ4IDk2LDQ4IDk2LDk2IDAsOTYiIC8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI2Nvcm5lcikiPjxjaXJjbGUgY3g9IjQ4IiBjeT0iNDgiIHI9IjMyIi8+PC9nPjwvc3ZnPg==');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 3rem;
-}
-
-.deferred.loading:before {
-  opacity: 0.35;
-  z-index: 0;
 }
 
 .container {
@@ -633,8 +436,6 @@ body.is-instant:after {
 }
 
 h1,
-h2,
-h3,
 p {
   direction: var(--site-language-direction);
   position: relative;
@@ -646,29 +447,6 @@ h3 span.p,
 p span.p {
   display: block;
   position: relative;
-}
-
-h1 span[style],
-h2 span[style],
-h3 span[style],
-p span[style],
-h1 strong,
-h2 strong,
-h3 strong,
-p strong,
-h1 a,
-h2 a,
-h3 a,
-p a,
-h1 code,
-h2 code,
-h3 code,
-p code,
-h1 mark,
-h2 mark,
-h3 mark,
-p mark {
-  -webkit-text-fill-color: currentcolor;
 }
 
 #text01 {
@@ -698,36 +476,12 @@ p mark {
   }
 }
 
-#text01 a {
-  text-decoration: underline;
-}
-
-#text01 a:hover {
-  text-decoration: none;
-}
-
-#text01 span.p:nth-child(n + 2) {
-  margin-top: 1rem;
-}
-
 #text02 {
   color: #CDD6F4;
   font-family: 'Roboto Mono', monospace;
   font-size: 1.125em;
   line-height: 1.5;
   font-weight: 400;
-}
-
-#text02 a {
-  text-decoration: underline;
-}
-
-#text02 a:hover {
-  text-decoration: none;
-}
-
-#text02 span.p:nth-child(n + 2) {
-  margin-top: 1rem;
 }
 
 .icons {
@@ -772,14 +526,6 @@ p mark {
 #icons01 {
   font-size: 1em;
   gap: 0.5rem;
-}
-
-#icons01:not(:first-child) {
-  margin-top: 0.875rem !important;
-}
-
-#icons01:not(:last-child) {
-  margin-bottom: 0.875rem !important;
 }
 
 #icons01 li a {
