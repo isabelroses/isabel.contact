@@ -468,13 +468,9 @@
 	})()
 })()
 
-/* -- Text effect -- */
-
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
 let interval = null
 let allowOnce = true
-
 document.querySelector("#text01").onmouseover = (event) => {
 	if (allowOnce === true) {
 		let iteration = 0
@@ -512,8 +508,6 @@ if (!document.body.classList.contains("is-touch")) {
 	blur.id = "blur"
 	document.getElementById("wrapper").appendChild(blob)
 	document.getElementById("wrapper").appendChild(blur)
-
-	/* -- Glow effect -- */
 	window.onpointermove = (event) => {
 		const {clientX, clientY} = event
 
