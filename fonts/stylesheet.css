@@ -1,67 +1,52 @@
 @font-face {
     font-family: 'victor_monoitalic';
     src: url('victormono-italic-webfont.woff2') format('woff2'),
-         url('victormono-italic-webfont.woff') format('woff');
+        url('victormono-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'victor_monomedium_italic';
     src: url('victormono-mediumitalic-webfont.woff2') format('woff2'),
-         url('victormono-mediumitalic-webfont.woff') format('woff');
+        url('victormono-mediumitalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'victor_monobold';
     src: url('victormono-bold-webfont.woff2') format('woff2'),
-         url('victormono-bold-webfont.woff') format('woff');
+        url('victormono-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'victor_monomedium';
     src: url('victormono-medium-webfont.woff2') format('woff2'),
-         url('victormono-medium-webfont.woff') format('woff');
+        url('victormono-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'victor_monolight';
     src: url('victormono-light-webfont.woff2') format('woff2'),
-         url('victormono-light-webfont.woff') format('woff');
+        url('victormono-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
-
-
-
 @font-face {
     font-family: 'victor_monoregular';
     src: url('victormono-regular-webfont.woff2') format('woff2'),
-         url('victormono-regular-webfont.woff') format('woff');
+        url('victormono-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
