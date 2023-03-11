@@ -520,3 +520,10 @@ if (!document.body.classList.contains("is-touch")) {
 		)
 	}
 }
+
+// service worker
+window.addEventListener("load", () => {
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+    }
+});
