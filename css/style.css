@@ -602,7 +602,6 @@ body.is-instant:after {
   width: 11rem;
   border-radius: 100%;
   transition: none;
-  aspect-ratio: 1;
 }
 
 #image01 .frame img {
