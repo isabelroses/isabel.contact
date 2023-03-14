@@ -1011,3 +1011,12 @@ body:after {
   z-index: 2;
   backdrop-filter: blur(12vmax);
 }
+
+.conner-links {
+  z-index: 3; 
+  position: absolute; 
+  bottom: 0%;
+  right: 0%;
+  text-decoration: none;
+  font-size: smaller;
+}
