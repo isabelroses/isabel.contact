@@ -697,8 +697,9 @@ p span.p {
 }
 
 #icons01 {
-  font-size: 1.2em;
-  gap: 0.675rem;
+  justify-content: center;
+  font-size: 1em;
+  gap: 0.5rem;
 }
 
 #icons01 li a {
@@ -915,7 +916,7 @@ p span.p {
   }
 
   #icons01:not(:first-child) {
-    margin-top: 0.65625rem !important;
+    margin-top: 0.875rem !important
   }
 
   #icons01:not(:last-child) {
@@ -1013,8 +1014,8 @@ body:after {
 }
 
 .conner-links {
-  z-index: 3; 
-  position: absolute; 
+  z-index: 3;
+  position: absolute;
   bottom: 0%;
   right: 0%;
   text-decoration: none;
