@@ -1,4 +1,4 @@
-;(function () {
+; (function () {
 	var on = addEventListener,
 		$ = function (q) {
 			return document.querySelector(q)
@@ -10,14 +10,14 @@
 		$inner = $(".inner"),
 		client = (function () {
 			var o = {
-					browser: "other",
-					browserVersion: 0,
-					os: "other",
-					osVersion: 0,
-					mobile: false,
-					canUse: null,
-					flags: {lsdUnits: false},
-				},
+				browser: "other",
+				browserVersion: 0,
+				os: "other",
+				osVersion: 0,
+				mobile: false,
+				canUse: null,
+				flags: { lsdUnits: false },
+			},
 				ua = navigator.userAgent,
 				a,
 				i
@@ -272,7 +272,7 @@
 	document.head.appendChild(style)
 	sheet = style.sheet
 	if (client.mobile) {
-		;(function () {
+		; (function () {
 			if (client.flags.lsdUnits) {
 				document.documentElement.style.setProperty("--viewport-height", "100svh")
 				document.documentElement.style.setProperty("--background-height", "100dvh")
@@ -291,7 +291,7 @@
 		})()
 	}
 	if (client.os == "android") {
-		;(function () {
+		; (function () {
 			sheet.insertRule("body::after { }", 0)
 			rule = sheet.cssRules[0]
 			var f = function () {
@@ -420,58 +420,58 @@
 		},
 	}
 	scrollEvents.init()
-	;(function () {
-		var items = $$(".deferred"),
-			loadHandler,
-			enterHandler
-		loadHandler = function () {
-			var i = this,
-				p = this.parentElement
-			if (i.dataset.src !== "done") return
-			if (Date.now() - i._startLoad < 375) {
-				p.classList.remove("loading")
-				p.style.backgroundImage = "none"
-				i.style.transition = ""
-				i.style.opacity = 1
-			} else {
-				p.classList.remove("loading")
-				i.style.opacity = 1
-				setTimeout(function () {
-					i.style.backgroundImage = "none"
+		; (function () {
+			var items = $$(".deferred"),
+				loadHandler,
+				enterHandler
+			loadHandler = function () {
+				var i = this,
+					p = this.parentElement
+				if (i.dataset.src !== "done") return
+				if (Date.now() - i._startLoad < 375) {
+					p.classList.remove("loading")
+					p.style.backgroundImage = "none"
 					i.style.transition = ""
-				}, 375)
+					i.style.opacity = 1
+				} else {
+					p.classList.remove("loading")
+					i.style.opacity = 1
+					setTimeout(function () {
+						i.style.backgroundImage = "none"
+						i.style.transition = ""
+					}, 375)
+				}
 			}
-		}
-		enterHandler = function () {
-			var i = this,
-				p = this.parentElement,
-				src
-			src = i.dataset.src
-			i.dataset.src = "done"
-			p.classList.add("loading")
-			i._startLoad = Date.now()
-			i.src = src
-		}
-		items.forEach(function (p) {
-			var i = p.firstElementChild
-			if (!p.classList.contains("enclosed")) {
-				p.style.backgroundImage = "url(" + i.src + ")"
-				p.style.backgroundSize = "100% 100%"
-				p.style.backgroundPosition = "top left"
-				p.style.backgroundRepeat = "no-repeat"
+			enterHandler = function () {
+				var i = this,
+					p = this.parentElement,
+					src
+				src = i.dataset.src
+				i.dataset.src = "done"
+				p.classList.add("loading")
+				i._startLoad = Date.now()
+				i.src = src
 			}
-			i.style.opacity = 0
-			i.style.transition = "opacity 0.375s ease-in-out"
-			i.addEventListener("load", loadHandler)
-			scrollEvents.add({element: i, enter: enterHandler, offset: 250})
-		})
-	})()
+			items.forEach(function (p) {
+				var i = p.firstElementChild
+				if (!p.classList.contains("enclosed")) {
+					p.style.backgroundImage = "url(" + i.src + ")"
+					p.style.backgroundSize = "100% 100%"
+					p.style.backgroundPosition = "top left"
+					p.style.backgroundRepeat = "no-repeat"
+				}
+				i.style.opacity = 0
+				i.style.transition = "opacity 0.375s ease-in-out"
+				i.addEventListener("load", loadHandler)
+				scrollEvents.add({ element: i, enter: enterHandler, offset: 250 })
+			})
+		})()
 })()
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let interval = null
 let allowOnce = true
-document.querySelector("#text01").onmouseover = (event) => {
+document.querySelector("#title").onmouseover = (event) => {
 	if (allowOnce === true) {
 		let iteration = 0
 
@@ -509,21 +509,21 @@ if (!document.body.classList.contains("is-touch")) {
 	document.getElementById("wrapper").appendChild(blob)
 	document.getElementById("wrapper").appendChild(blur)
 	window.onpointermove = (event) => {
-		const {clientX, clientY} = event
+		const { clientX, clientY } = event
 
 		blob.animate(
 			{
 				left: `${clientX}px`,
 				top: `${clientY}px`,
 			},
-			{duration: 0, fill: "forwards"}
+			{ duration: 0, fill: "forwards" }
 		)
 	}
 }
 
 // service worker
 window.addEventListener("load", () => {
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js");
-    }
+	if ("serviceWorker" in navigator) {
+		navigator.serviceWorker.register("sw.js");
+	}
 });
