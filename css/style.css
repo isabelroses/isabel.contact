@@ -598,13 +598,13 @@ body.is-instant:after {
   border-bottom-right-radius: inherit;
 }
 
-#image01 .frame {
+#image .frame {
   width: 11rem;
   border-radius: 100%;
   transition: none;
 }
 
-#image01 .frame img {
+#image .frame img {
   transition: none;
 }
 
@@ -627,11 +627,11 @@ body.is-instant:after {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #cba6f7, 0 0 40px #cba6f7, 0 0 50px #cba6f7, 0 0 60px #cba6f7, 0 0 70px #cba6f7;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #89b4fa, 0 0 40px #89b4fa, 0 0 50px #89b4fa, 0 0 60px #89b4fa, 0 0 70px #89b4fa;
   }
 
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #cba6f7, 0 0 40px #cba6f7, 0 0 50px #cba6f7, 0 0 60px #cba6f7, 0 0 70px #cba6f7, 0 0 80px #cba6f7;
+    text-shadow: 0 0 20px #fff, 0 0 30px #89b4fa, 0 0 40px #89b4fa, 0 0 50px #89b4fa, 0 0 60px #89b4fa, 0 0 70px #89b4fa, 0 0 80px #89b4fa;
   }
 }
 
@@ -682,42 +682,42 @@ body.is-instant:after {
   display: none;
 }
 
-#icons01 {
+#icons {
   justify-content: flex-start;
   font-size: 1em;
   gap: 0.5rem;
 }
 
-#icons01 li a {
+#icons li a {
   border-radius: 100%;
   height: 2em;
   width: 2em;
   transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
-#icons01 li a svg {
+#icons li a svg {
   height: 60%;
   width: 60%;
   transition: fill 0.25s ease;
 }
 
-#icons01 a svg {
+#icons a svg {
   fill: #A6ADC8;
 }
 
-#icons01 a {
+#icons a {
   border: solid 2px #A6ADC8;
 }
 
-#icons01 a:hover {
+#icons a:hover {
   border-color: #45475A !important;
 }
 
-#icons01 a:hover svg {
+#icons a:hover svg {
   fill: #45475A !important;
 }
 
-#icons01 li a+svg {
+#icons li a+svg {
   transition: fill 0.25s ease, stroke 0.25s ease;
 }
 
@@ -878,7 +878,7 @@ body.is-instant:after {
     width: 100% !important;
   }
 
-  #image01 .frame {
+  #image .frame {
     width: 11rem;
   }
 
@@ -896,16 +896,17 @@ body.is-instant:after {
     line-height: 1.5;
   }
 
-  #icons01 {
+  #icons {
     font-size: 1em;
     gap: 0.5rem;
+    justify-content: center;
   }
 
-  #icons01:not(:first-child) {
+  #icons:not(:first-child) {
     margin-top: 0.875rem !important
   }
 
-  #icons01:not(:last-child) {
+  #icons:not(:last-child) {
     margin-bottom: 0.65625rem !important;
   }
 }
@@ -944,7 +945,7 @@ body.is-instant:after {
     font-size: 1.125em;
   }
 
-  #icons01 {
+  #icons {
     gap: 0.375rem;
   }
 }
@@ -986,7 +987,7 @@ body:after {
   top: 50%;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to right, rgb(129, 161, 231), rgb(154, 123, 216));
+  background: #74c7ec;
   animation: rotate 20s infinite;
   opacity: 0.8;
 }
